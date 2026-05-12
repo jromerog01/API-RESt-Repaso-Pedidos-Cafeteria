@@ -1,0 +1,50 @@
+[
+  {
+    "idProducto": 1,
+    "precio": 45.0,
+    "nombre": "Café Americano",
+    "cantidad": 20
+  },
+  {
+    "idProducto": 2,
+    "precio": 52.5,
+    "nombre": "Capuchino",
+    "cantidad": 15
+  },
+  {
+    "idProducto": 3,
+    "precio": 60.0,
+    "nombre": "Latte",
+    "cantidad": 18
+  },
+  {
+    "idProducto": 4,
+    "precio": 38.0,
+    "nombre": "Moka Oscuro",
+    "cantidad": 10
+  },
+  {
+    "idProducto": 5,
+    "precio": 30.0,
+    "nombre": "Galleta de Chocolate",
+    "cantidad": 25
+  },
+  {
+    "idProducto": 6,
+    "precio": 42.0,
+    "nombre": "Chamoyada",
+    "cantidad": 8
+  },
+  {
+    "idProducto": 7,
+    "precio": 28.5,
+    "nombre": "Croissant",
+    "cantidad": 12
+  },
+  {
+    "idProducto": 8,
+    "precio": 35.0,
+    "nombre": "Muffin de Vainilla",
+    "cantidad": 14
+  }
+]

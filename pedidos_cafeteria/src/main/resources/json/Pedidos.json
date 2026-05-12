@@ -1,0 +1,50 @@
+[
+  {
+    "idPedido": 1,
+    "fecha": "2026-05-10",
+    "nombreCliente": "Ana Martínez",
+    "idProductos": [1, 5],
+    "importeTotal": 75.0,
+    "estadoPedido": "PENDIENTE"
+  },
+  {
+    "idPedido": 2,
+    "fecha": "2026-05-10",
+    "nombreCliente": "Luis Hernández",
+    "idProductos": [2, 7, 5],
+    "importeTotal": 111.0,
+    "estadoPedido": "ENTREGADO"
+  },
+  {
+    "idPedido": 3,
+    "fecha": "2026-05-11",
+    "nombreCliente": "María López",
+    "idProductos": [3],
+    "importeTotal": 60.0,
+    "estadoPedido": "PREPARANDO"
+  },
+  {
+    "idPedido": 4,
+    "fecha": "2026-05-11",
+    "nombreCliente": "Carlos Ramírez",
+    "idProductos": [4, 8],
+    "importeTotal": 73.0,
+    "estadoPedido": "PENDIENTE"
+  },
+  {
+    "idPedido": 5,
+    "fecha": "2026-05-11",
+    "nombreCliente": "Fernanda Gómez",
+    "idProductos": [1, 2, 6],
+    "importeTotal": 139.5,
+    "estadoPedido": "ENTREGADO"
+  },
+  {
+    "idPedido": 6,
+    "fecha": "2026-05-12",
+    "nombreCliente": "Jorge Navarro",
+    "idProductos": [5, 5, 7],
+    "importeTotal": 88.5,
+    "estadoPedido": "PREPARANDO"
+  }
+]
