@@ -1,6 +1,9 @@
 package com.jesus.springboot.app.cafeteria.pedidos_cafeteria.repositories;
 
+import com.jesus.springboot.app.cafeteria.pedidos_cafeteria.exceptions.IdPedidoInvalidoException;
 import com.jesus.springboot.app.cafeteria.pedidos_cafeteria.models.Pedido;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Repository;
@@ -14,6 +17,9 @@ import java.util.Arrays;
 public class ImplPedidoRepository implements PedidoRepository {
 
     private ArrayList<Pedido> pedidos;
+
+    @Value("${fijo.estadoPedido}")
+    private String entregado;
 
     @Override
     public ArrayList<Pedido> findAll() {
@@ -34,7 +40,7 @@ public class ImplPedidoRepository implements PedidoRepository {
 
     @Override
     public Pedido findById(int id) {
-        for (Pedido p : pedidos){
+        for (Pedido p : findAll()){
             if (p.getIdPedido() == id){
                 return p;
             }
@@ -45,12 +51,18 @@ public class ImplPedidoRepository implements PedidoRepository {
 
     @Override
     public void addPedido(Pedido pedido) {
-        pedidos.add(pedido);
+        findAll().add(pedido);
     }
 
     @Override
-    public void actualizarEstado(int id, String estado) {
+    public void marcarEntregado(int id) {
         Pedido pedido = findById(id);
-        pedido.setEstadoPedido(estado);
+
+        if (pedido.getEstadoPedido().equals(entregado)){
+            throw new IdPedidoInvalidoException("Este pedido ya ha sido entregado, no puedes" +
+                    "marcalo de nuevo como entregado");
+        }
+
+        pedido.setEstadoPedido("ENTREGADO");
     }
 }

@@ -9,7 +9,7 @@ public interface PedidoRepository {
     public ArrayList<Pedido> findAll();
     public Pedido findById(int id);
     public void addPedido(Pedido pedido);
-    public void actualizarEstado(int id, String estado);
+    public void marcarEntregado(int id);
 
 
 }

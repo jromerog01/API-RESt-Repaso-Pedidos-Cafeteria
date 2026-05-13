@@ -34,7 +34,7 @@ public class ImplProductoRepository implements ProductoRepository {
 
     @Override
     public Producto findById(int id) {
-        for (Producto p : productos){
+        for (Producto p : findAll()){
             if (p.getIdProducto() == id){
                 return p;
             }

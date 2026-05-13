@@ -10,9 +10,10 @@ public interface PedidoService {
     public PedidoDTO findById(int id);
     public void addPedido(Pedido pedido);
     public ArrayList<Pedido> findAllRaw();
-    public void actualizarEstado(int id, String estado);
+    public PedidoDTO marcarEntregado(int id);
+    public ArrayList<Integer> getIdPedidos();
 
 
 
 
-}
+    }

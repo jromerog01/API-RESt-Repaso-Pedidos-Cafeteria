@@ -110,24 +110,19 @@ public class ImplPedidoService implements PedidoService {
     }
 
     @Override
-    public void actualizarEstado(int id, String estado) {
+    public PedidoDTO marcarEntregado(int id) {
         if (!getIdPedidos().contains(id)){
             throw new IdPedidoInvalidoException("Tu pedido no existe, no puedes actualizar su estado");
         }
 
-        ArrayList<String> estados = new ArrayList<>(Arrays.asList("pendiente", "entregado", "preparando"));
-
-        if (!estados.contains(estado.toLowerCase())){
-            throw new IllegalArgumentException("El estado introducido es invalido");
-        }
-
-
-        repository.actualizarEstado(id, estado);
+        repository.marcarEntregado(id);
         mapearPedidos();
+
+        return findById(id);
     }
 
 
-    private ArrayList<Integer> getIdPedidos(){
+    public ArrayList<Integer> getIdPedidos(){
         ArrayList<Integer> idPedidos = new ArrayList<>();
 
         for (Pedido p : repository.findAll()){

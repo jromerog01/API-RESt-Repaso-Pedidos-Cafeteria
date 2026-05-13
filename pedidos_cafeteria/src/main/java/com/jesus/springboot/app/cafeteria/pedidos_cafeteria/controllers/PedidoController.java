@@ -37,9 +37,9 @@ public class PedidoController {
         return pedido;
     }
 
-    @PutMapping("/{idPedido}/{estado}")
-    public void actualizarEstado(@PathVariable int idPedido, @PathVariable String estado){
-        service.actualizarEstado(idPedido, estado.toUpperCase());
+    @PutMapping("/entregar/{idPedido}")
+    public PedidoDTO marcarEntregado(@PathVariable int idPedido){
+        return service.marcarEntregado(idPedido);
     }
 
 
