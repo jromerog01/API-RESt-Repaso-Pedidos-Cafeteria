@@ -23,4 +23,9 @@ public class ImplProductoService implements ProductoService{
     public Producto findById(int id) {
         return repository.findById(id);
     }
+
+    @Override
+    public Producto addProducto(Producto producto) {
+        return repository.addProducto(producto);
+    }
 }

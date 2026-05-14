@@ -42,4 +42,11 @@ public class ImplProductoRepository implements ProductoRepository {
 
         throw new IllegalArgumentException("Tu id no existe mano");
     }
+
+
+    @Override
+    public Producto addProducto(Producto producto) {
+        productos.add(producto);
+        return producto;
+    }
 }

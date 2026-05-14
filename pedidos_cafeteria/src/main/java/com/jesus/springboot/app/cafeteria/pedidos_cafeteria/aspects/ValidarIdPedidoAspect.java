@@ -13,21 +13,21 @@ import java.util.List;
 @Aspect
 @Component
 public class ValidarIdPedidoAspect {
-
-    @Before("execution(* com.jesus.springboot.app.cafeteria.pedidos_cafeteria.services.ImplPedidoService.addPedido(..)) && args(pedido)")
-    public void verificarIdProductos(Pedido pedido) {
-        ArrayList<Integer> productosValidos = new ArrayList<>(Arrays.asList(1,2,3));
-        List<Integer> pedidosOrden = pedido.getIdProductos();
-
-
-        for (Integer p : pedidosOrden){
-            if (!productosValidos.contains(p)){
-                throw new IdPedidoInvalidoException("Uno de los productos del pedido no esta en el intervalo");
-            }
-        }
-
-
-    }
+//
+//    @Before("execution(* com.jesus.springboot.app.cafeteria.pedidos_cafeteria.services.ImplPedidoService.addPedido(..)) && args(pedido)")
+//    public void verificarIdProductos(Pedido pedido) {
+//        ArrayList<Integer> productosValidos = new ArrayList<>(Arrays.asList(1,2,3));
+//        List<Integer> pedidosOrden = pedido.getIdProductos();
+//
+//
+//        for (Integer p : pedidosOrden){
+//            if (!productosValidos.contains(p)){
+//                throw new IdPedidoInvalidoException("Uno de los productos del pedido no esta en el intervalo");
+//            }
+//        }
+//
+//
+//    }
 
 
 

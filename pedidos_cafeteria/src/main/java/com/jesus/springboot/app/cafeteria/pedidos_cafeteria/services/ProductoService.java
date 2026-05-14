@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public interface ProductoService {
     public ArrayList<Producto> findAll();
     public Producto findById(int id);
+    public Producto addProducto(Producto producto);
+
 
 
 

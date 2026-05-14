@@ -8,5 +8,6 @@ public interface ProductoRepository {
 
     public ArrayList<Producto> findAll();
     public Producto findById(int id);
+    public Producto addProducto(Producto producto);
 
 }
